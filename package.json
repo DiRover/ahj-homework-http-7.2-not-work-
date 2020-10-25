@@ -41,6 +41,7 @@
     "jest": "jest --coverage",
     "test": "jest --testPathPattern=./src/",
     "coverage": "jest --testPathPattern=./src/ --coverage",
-    "e2e": "jest --testPathPattern=./e2e/"
+    "e2e": "jest --testPathPattern=./e2e/",
+    "fix": "lint -- --fix"
   }
 }

@@ -1,30 +1,148 @@
 .container {
-    width: 800px;
-    margin: 50px auto;
+    margin: 500px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.button {
+.btn-add {
     display: flex;
-    background-color: aqua;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 50px;
+    background-color: gray;
+    border-radius: 20px;
     cursor: pointer;
 }
 
-.task-list {
+.widget {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    background-color: grey;
+}
+
+.widget-menu {
+    position: relative;
+}
+
+.items-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px;
+}
+
+.items-box {
+    display: grid;
+    width: 800px;
+    border: #dc3545 1px solid;
+    grid-template-columns: 4fr 1fr 1fr;
+    position: relative;
+    text-align: center;
+    border: cornflowerblue 1px solid;
+}
+
+.items-title .grid-title {
+    text-align: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    align-self: center;
+    padding: 0;
+    margin: 0 20px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10%;
+    line-height: 150%;
+    text-align: center;
+}
+
+.ticket-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-div {
-    color: blue;
+.cell {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.ticket-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    width: 250px;
+    height: 50px;
+    font-size: 1.25rem;
+    color: aliceblue;
+    border: 1px solid snow;
+    background-color: black;
+}
+
+.header {
+    width: 800px;
+}
+
+#add-item {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+}
+
+.btn-container {
+    display: flex;
+}
+
+
+.msg {
+    font-size: 1rem;
+    color:  rgba(0, 0, 0, 1);;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 1099;
+    width: 200px;
+    background-color: cornflowerblue;
+}
+
+.err-msg {
+    padding: 0;
+    margin: 0;
+}
+
+.edit-pencil {
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.delete-bin {
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.active {
+    visibility: visible;
 }
