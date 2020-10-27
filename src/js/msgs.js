@@ -2,7 +2,7 @@ const msgs = {
   name: {
     valueMissing: 'Please, enter short name of ticket!',
   },
-  price: {
+  description: {
     valueMissing: 'Please, enter full description of ticket!',
   },
 };

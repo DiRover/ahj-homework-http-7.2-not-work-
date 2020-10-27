@@ -12,11 +12,11 @@
             <div class="btn-add" data-id="add-btn">+Add ticket</div>
         </header>
         <div class="widget hidden" data-widget="widget">
-            <form id="add-item" class="widget-menu" data-menu="add-menu" novalidate>
+            <form id="add-item" class="widget-menu" data-widget="form" novalidate>
                 <h3 class="name-title">Name</h3>
                 <input name="name" class="input" type="text" required data-field="name" placeholder="enter short name">
                 <h3 class="price-title">Description</h3>
-                <input name="description" class="input" type="text" required data-field="price" placeholder="enter full description">
+                <input name="description" class="input" type="text" required data-field="description" placeholder="enter full description">
                 <div class="btn-container">
                     <button form="add-item" data-btn="save-btn" class="save btn">Save</button>
                     <button data-btn="cancel-btn" class="cancel btn">Cancel</button>
@@ -30,7 +30,13 @@
             <p class="grid-title"></p>
         </div>
         <div class="items-box" data-id="items-container"></div>
-        <div class="msgDel hidden" data-msgDel="delete">Do you realy want to delete this ticket?</div>
+        <div class="msg-del hidden" data-msgDel="delete">
+            <p class="del-text">Do you realy want to delete this ticket?</p>
+            <div class="btn-section" data-btn="section">
+                <div class="btn" data-del="del-ticket">YES</div>
+                <div class="btn" data-btn="cancel-btn">NO</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

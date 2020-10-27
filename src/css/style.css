@@ -27,12 +27,13 @@
 .widget {
     position: absolute;
     top: 0;
-    z-index: 999;
+    z-index: 9;
     background-color: grey;
 }
 
 .widget-menu {
     position: relative;
+    z-index: 19;
 }
 
 .items-title {
@@ -88,6 +89,9 @@
 }
 
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 250px;
     height: 50px;
     font-size: 1.25rem;
@@ -109,7 +113,6 @@
 .btn-container {
     display: flex;
 }
-
 
 .msg {
     font-size: 1rem;
@@ -139,10 +142,31 @@
     font-size: 1.4rem;
 }
 
+.msg-del {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    width: 700px;
+}
+
+.del-text {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
 .hidden {
     visibility: hidden;
 }
 
 .active {
     visibility: visible;
+}
+
+.pin {
+    background-image: url('../img/checkmark.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
