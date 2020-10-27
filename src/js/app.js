@@ -1,3 +1,6 @@
+/* eslint-disable func-names */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-use-before-define */
 /* eslint-disable import/no-cycle */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/prefer-default-export */
@@ -67,7 +70,7 @@ function addTicket(e) {
       console.log(this.responseText); // получаем сообщение в консоль о добавлении тикета
       data = JSON.parse(this.responseText);
       buildList(data, ticketsBox);
-      // закрываем и очищаем форму и возможные сообщения с ошибками 
+      // закрываем и очищаем форму и возможные сообщения с ошибками
       widget.classList.add('hidden');
       form.classList.remove('add');
       msg.classList.add('hidden');
@@ -109,7 +112,7 @@ function getDescription(e) {
   if (target.hasAttribute('data-ticket')) {
     //получаем id тикета
     ticketId = target.dataset.ticket;
-    data.forEach(element => {
+    data.forEach((element) => {
       if (element.id === ticketId) {
         //находим описание и вставляем в разметку
         parent = target.closest('.ticket-content');
@@ -121,10 +124,10 @@ function getDescription(e) {
         elem.innerHTML = `${element.description}`;
         elem.setAttribute('class', 'ticket-description');
         parent.appendChild(elem);
-      };
+      }
     });
-  };
-};
+  }
+}
 
 //скрываем описание тикета
 document.addEventListener('click', closeDescription);
@@ -146,9 +149,8 @@ function closeDescription(e) {
       //удаляем узел с описанием
       ticketDescip.remove();
     });
-  };
+  }
 }
-
 
 //редактируем тикет
 ticketsBox.addEventListener('click', getPencil);
@@ -177,9 +179,9 @@ function getPencil(e) {
     });
   } else {
     //если попали не на карандаш, то просто выходим из функции
-    return;
+
   }
-};
+}
 //отправляем отредактированный тикет
 function editTicket(e) {
   e.preventDefault();
@@ -218,8 +220,8 @@ function changeStatus(e) {
     } else if (pin) {
       params.append('status', false);
     }
-      xhr.open('PATCH', URL);
-      xhr.send(params);
+    xhr.open('PATCH', URL);
+    xhr.send(params);
   }
 }
 

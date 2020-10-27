@@ -5,9 +5,9 @@ export default function buildList(arr, boxItems) {
     const elem1 = document.createElement('p');
     const elem2 = document.createElement('p');
     const elem3 = document.createElement('p');
-    //проверяем статус тикета, ответ приходит в формате string
-    //если true, то ставим галочку
-    if (item.status === "true") {
+    // проверяем статус тикета, ответ приходит в формате string
+    // если true, то ставим галочку
+    if (item.status === 'true') {
       elem1.innerHTML = `<div class="circle pin" data-circle="circle"></div><div class="ticket-content"><p class="ticket-text" data-ticket=${item.id}>${item.name}</p></div>`;
     } else {
       elem1.innerHTML = `<div class="circle" data-circle="circle"></div><div class="ticket-content"><p class="ticket-text" data-ticket=${item.id}>${item.name}</p></div>`;

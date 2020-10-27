@@ -1,7 +1,8 @@
+/* eslint-disable import/no-cycle */
 import { widget, form } from './app';
 
-function closeModal(e) {
-    e.preventDefault();
-    widget.classList.add('hidden');
-    form.classList.remove('add');
+export default function closeModal(e) {
+  e.preventDefault();
+  widget.classList.add('hidden');
+  form.classList.remove('add');
 }
