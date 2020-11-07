@@ -26,7 +26,7 @@ const btnsSection = document.querySelector('[data-btn="section"]');
 const nameInput = document.querySelector('[data-field="name"]');
 const descriptionInput = document.querySelector('[data-field="description"]');
 const URL = 'https://http-herocu.herokuapp.com/';
-//const URL = 'http://localhost:7070/';
+
 
 document.addEventListener('DOMContentLoaded', getPage);
 const xhr = new XMLHttpRequest();
