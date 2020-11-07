@@ -25,8 +25,8 @@ const msgDel = document.querySelector('[data-msgDel="delete"]');
 const btnsSection = document.querySelector('[data-btn="section"]');
 const nameInput = document.querySelector('[data-field="name"]');
 const descriptionInput = document.querySelector('[data-field="description"]');
-const URL = 'https://http-herocu.herokuapp.com/';
-
+const url = 'https://http-herocu.herokuapp.com/';
+//const url = 'http://localhost:7070/';
 
 document.addEventListener('DOMContentLoaded', getPage);
 const xhr = new XMLHttpRequest();
@@ -38,7 +38,7 @@ let target;
 //отрисовываем страницу со списком
 function getPage() {
   console.log('ok');
-  xhr.open('GET', URL);
+  xhr.open('GET', url);
   xhr.send();
   xhr.onloadend = function () {
     console.log(this.responseText); // получаем сообщение в консоль о добавлении тикета
@@ -66,7 +66,7 @@ function addTicket(e) {
     const formData = new FormData(e.currentTarget);
     //ставим режим добавления тикета форме
     form.classList.add('add');
-    xhr.open('POST', URL);
+    xhr.open('POST', url);
     xhr.send(formData);
     xhr.onloadend = function () {
       console.log(this.responseText); // получаем сообщение в консоль о добавлении тикета
@@ -193,7 +193,7 @@ function editTicket(e) {
   params.append('id', ticketId);
   params.append('name', nameInput.value);
   params.append('description', descriptionInput.value);
-  xhr.open('PATCH', URL);
+  xhr.open('PATCH', url);
   xhr.send(params);
   form.classList.remove('edit');
   widget.classList.add('hidden');
@@ -221,7 +221,7 @@ function changeStatus(e) {
     } else if (pin) {
       params.append('status', false);
     }
-    xhr.open('PATCH', URL);
+    xhr.open('PATCH', url);
     xhr.send(params);
   }
 }
@@ -249,7 +249,7 @@ function deleteTicket(e) {
     const params = new URLSearchParams();
     params.append('method', 'deleteTicket');
     params.append('id', ticketId);
-    xhr.open('PATCH', URL);
+    xhr.open('PATCH', url);
     xhr.send(params);
     msgDel.classList.add('hidden'); //buildList ненужен т.к. срабатывает getPage
   } else if (target.hasAttribute('data-btn')) {
