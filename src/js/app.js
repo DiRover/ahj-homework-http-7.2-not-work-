@@ -46,6 +46,7 @@ function getPage() {
     buildList(data, ticketsBox);
   };
 }
+
 //добавление тикета
 //показываем модальное окно с формой добавления тикета
 button.addEventListener('click', showModal);
